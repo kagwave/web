@@ -1,0 +1,48 @@
+
+.collabs-pg{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.collabs-h1{
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  color: gray;
+  height: 30px;
+  padding-top: 20px;
+  align-items: center;
+  font-family: 'Abrade';
+}
+
+.showcase {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin: auto;
+  height: 350px;
+}
+  
+.collabs-pg-video {
+  align-items: center;
+}
+  
+.collab-preview{
+  width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.collab-desc{
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}

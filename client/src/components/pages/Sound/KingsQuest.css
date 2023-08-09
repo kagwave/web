@@ -1,0 +1,19 @@
+.kq-album-info h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c2c2c;
+    font-size: 13px;
+    margin-top: 13px;
+    margin-bottom: 0;
+    padding:0;
+    font-style: italic;
+  }
+  
+  .kq-album-info h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(189, 189, 189);;
+    font-size: 9px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding:0;
+    font-style: none;
+  }

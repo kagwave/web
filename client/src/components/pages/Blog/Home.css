@@ -1,0 +1,130 @@
+.blog-pg {
+  background-color: white;
+  min-height: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.blog-home-pg {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.blog-pg-header {
+  display: flex;
+}
+
+.blog-pg-header h1 {
+  text-align: center;
+  font-family: 'Abrade';
+  font-size: calc(25px + 0.5vw);
+}
+
+
+
+
+
+
+
+
+.blog-home {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.blog-home-main {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.post-preview {
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px 3px  #cecece;
+  border: 1px solid rgb(222, 222, 222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 25px 0 25px;
+  flex: 1 1 0;
+}
+
+.post-preview-title h1 {
+  font-family: "Questrial";
+  color: black;
+  font-size: 20px;
+  margin: 15px 0 15px 0;
+}
+
+.post-preview-detail {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.post-preview-detail h1 {
+  font-family: "Abrade";
+  color: black;
+  font-size: 12px;
+  margin: 0 10px 5px 10px;
+}
+
+
+
+
+
+
+
+
+.blog-navbar {
+  min-height: inherit;
+  background: #171d1e;
+  width: 15%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-filter-option {
+ display: flex;
+ flex-direction: row;
+}
+
+.blog-topics {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-topics h1 {
+  font-family: "Expansiva";
+  font-size: 20px;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .post-preview {margin: 0 0 25px 0;}
+}

@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Expansiva";
+  src: url("./style/Expansiva-bold.ttf");
+}
+
+.DrumApp {
+  width: 485px;
+  height: 250px;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-header {
+  width: 100%;
+  height: 10%;
+  opacity: 0.7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d1d1d1;
+  border-radius: 20px 20px 0 0;
+}
+
+.powerbtn {
+  border-radius: 50%;
+  color: #d1d1d1;
+  background-color: #d1d1d1;
+  display: block;
+  position: absolute;
+  border: none;
+  float: right;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+}
+
+.power-on {
+  background-image: url("./style/on.png");
+}
+
+.power-off {
+  background-image: url("./style/off.png");
+}
+
+.showPower {
+  right: 25px;
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+.bottom-header {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #d1d1d1;
+  border-radius: 0 0 20px 20px;
+  opacity: 0.7;
+}
+
+.plugin-info {
+  display: block;
+  position: absolute;
+  left: 10px;
+  font-size: 9px;
+  font-family: "Expansiva";
+}
+
+.version-info {
+  display: block;
+  position: relative;
+  text-align: left;
+  color: gray;
+  font-size: 7px;
+  font-family: "Expansiva";
+}
+
+.edges {
+  height: 100%;
+  width: 3px;
+  background-color: #43CAEE;
+}
+
+.mid-seperator {
+  height: 80%;
+  width: 3px;
+  background-color: #43CAEE;
+  border-radius: 50%;
+}
+
+.drum-machine {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80%;
+  background-color: black;
+}
+
+.pad {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6px;
+  position: relative;
+  float: right;
+  background-color: #d6d5d5;
+}
+
+.pad:hover {
+  cursor: pointer;
+}
+
+.pad-bank {
+  position: relative;
+  display: inline-block;
+  width: 65%;
+  margin-right: 10px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+.controls-container {
+  position: relative;
+  width: 35%;
+  display: inline-block;
+}
+
+.compensation-block {
+  height: 100%;
+  width: 6%;
+}
+
+.control {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: auto;
+}
+
+.display {
+  width: 60%;
+  background-color: #adadad;
+  margin: auto;
+  height: 30px;
+  margin-bottom: 15px;
+  font-size: 10px;
+  color: black;
+  font-family: "Expansiva";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.volume-slider {
+  width: 80%;
+  margin: auto;
+  background-color: black;
+}
+/*# sourceMappingURL=index.css.map */

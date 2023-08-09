@@ -1,0 +1,47 @@
+
+  /* PRODUCT PAGE */
+  .products-pg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+  } 
+
+  .latest-product-preview{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+.latest-product-preview-header {
+  text-align: center;
+  font-family: "Questrial";
+  font-size: 23px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+
+
+
+.drumkit-img{
+  width: 300px;
+  height: 300px;
+}
+
+
+
+
+
+
+

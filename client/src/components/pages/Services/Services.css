@@ -1,0 +1,109 @@
+.service-pg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.services-h1 {
+  font-size: 20px;
+  color: gray;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Abrade';
+}
+
+.services-container {
+  margin: auto;
+  width: 50%;
+}
+.service-header {
+  font-family: 'Abrade';
+  text-align: center;
+  font-size: 17px;
+}
+
+
+/* COLLAPSIBLE */
+.collapsible {
+    margin: auto;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .active-collapsed {
+    color: #a1d2ee;
+  }
+  
+  .collapsible:hover {
+    background-color: rgb(30, 30, 30);
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+  
+  .active-collapsed:after {
+    content: "\2212";
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .collapsed-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid green;*/
+    width: 90%;
+    margin: auto;
+    display: flex;
+  }
+
+  .service-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-desc-text{
+    font-family: 'Abrade';
+    font-size: 13px;
+  }
+
+  .more-btn-arrow{
+    border-radius: 50%;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    color: #1d1d1d;
+  }
+
+  .more-btn-arrow:hover{
+    color: #a1d2ee;
+    transition: color 0.2s ease-in;
+  }
+
+  @media screen and (max-width: 600px){
+    .service-header {
+      font-size: 14px;
+    }
+    .services-container {
+      width: 65%;
+    }
+  }
+
+

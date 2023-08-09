@@ -1,0 +1,72 @@
+
+@font-face {
+  font-family: 'Abrade';
+  src: url('./media/fonts/Abrade-SemiLight.ttf') format('truetype'),
+      url('./media/fonts/Abrade-SemiLight.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SnasmLight';
+  src: url('./media/fonts/Snasm-W00-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SnasmLightItalic';
+  src: url('./media/fonts/Snasm-W00-Light-Italic.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aspergit';
+  src: url('./media/fonts/Aspergit.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aspergit";
+  src: url("./media/fonts/Aspergit-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Aspergit";
+  src: url("./media/fonts/Aspergit-Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Aspergit";
+  src: url("./media/fonts/Aspergit-Bold-Italic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Neo';
+  src: url('./media/fonts/Neo-Latina.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Questrial';
+  src: url('./media/fonts/Questrial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Expansiva';
+  src: url('./media/fonts/Expansiva.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vezla';
+  src: url('./media/fonts/Vezla.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SuiGeneris';
+  src: url('./media/fonts/Sui-Generis.otf');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,140 @@
+@media screen and (max-width: 1000px) {
+  #footer { flex-wrap: wrap; flex-direction: column;}
+}
+
+#footer-container{
+  background-color: rgb(19, 19, 19);;
+  position: relative;
+}
+
+#footer {
+  border: none;
+  width: 75%;
+  margin: auto;
+  height: 100%;
+  min-height: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+.footer-link {
+  padding: 10px;
+}
+
+.footer-link h1 {
+  color: #6b8d92;
+  font-size: 16px;
+  font-family: 'Questrial';
+}
+
+.footer-links a {
+  font-size: 12px;
+  font-family: 'Aspergit';
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  color: rgb(189, 189, 189);
+}
+
+.footer-link a:hover {
+  color: #a3e0e7;
+}
+
+.footer-link li {
+  margin-bottom: 10px;
+  list-style-type: none;
+  text-indent: none;
+}
+
+.footer-link li::before {
+  content: "> ";
+  color: rgb(80, 80, 80);
+  font-size: 9px;
+}
+
+
+
+#footer-credits{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.footer-text {
+  text-align: center;
+  z-index:3;
+  margin: auto;
+}
+
+.footer-text h1{
+  font-size: 13px;
+  font-family: 'Questrial';
+  color: #838383;
+}
+.footer-text h2{
+  font-size: 9px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #464646;
+}
+
+.footer-text h6{
+  font-size: 20px;
+  font-family: 'courier';
+  color: #393939;
+  margin: 0;
+  padding: 0 3px 3px 3px;
+}
+
+.sponsor-logo{
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  float: right;
+  padding: 5px;
+  margin: auto;
+}
+
+.fa {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  color: #3B5998;
+}
+
+.fa-twitter {
+  color: #55ACEE;
+}
+
+.fa-instagram {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}

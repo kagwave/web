@@ -1,0 +1,135 @@
+.login-pg {
+  display: flex;
+  flex-direction: column;
+  min-height: 680px;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}
+
+.login-h1 {
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+  font-family: 'Neo';
+  background-color: inherit;
+}
+
+
+.login-box {
+  display:block;
+  border-radius: 5px;
+  background-color: inherit;
+  padding-top: 10px;
+  max-width:80%;
+  min-width:50%s;
+  width: 60%;
+  /*border: 1px solid black;*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#email-login {
+  width: 40%;
+  min-width: 250px;
+  color: black;/* Full width */
+  padding: 12px;/* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  margin: 5px;
+  font-size:calc(13px + 0.5vw);
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#password-login {
+  width: 40%;
+  min-width: 250px;
+  color: black;/* Full width */
+  padding: 12px;/* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  margin: 5px;
+  font-size:calc(13px + 0.5vw);
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#password {
+  -webkit-text-security: disc;
+}
+
+input[type=login]:focus {
+  box-shadow: 0 0 0 1px #43CAEE;
+  outline: none;
+}
+
+input[type=login]::placeholder{
+  color: rgb(160, 160, 160);
+}
+
+#signin-btn {
+  background-color: #43CAEE;
+  color: white;
+  padding: 12px 20px;
+  margin: 15px 0 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Expansiva";
+}
+
+.sign-in-options{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fb-sign-in{
+  background-color: #3B5998;
+  border: 2px solid #3B5998;
+  text-align: center;
+  color: white;
+}
+
+.alt-sign-in {
+  margin: 3px;
+  height: 20px;
+  padding: 5px;
+  border-radius:30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Questrial';
+  font-size: 15px;
+  min-width: 100px;
+}
+
+#google-sign-in{
+  background-color: white;
+  border: 2px solid gray;
+  text-align: center;
+}
+
+
+#apple-sign-in{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.or-seperator {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: center;
+}
+
+.or-seperator p {
+  margin: 0;
+}

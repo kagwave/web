@@ -1,0 +1,69 @@
+.search-pg {
+  background-color: #171d1e;
+  min-height: inherit;
+  width: 70%;
+  margin: auto;
+  padding: 25px 0 25px 0;
+}
+
+.search-pg h1 {
+  color: white;
+  font-family: 'Expansiva';
+  font-size: calc(15px + 0.2vw);
+  margin: 15px 0 15px 5px;
+}
+
+.search-pg-bar {
+  width: 50%;
+  height: 7vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-pg-input-form {
+  height: 7vh;
+  width: 100%;
+  border: none;
+}
+
+#search-pg-input {
+  height: 7vh;
+  width: calc(100% - 50px);
+  font-size: calc(20px + 0.5vw);
+  text-indent: 50px;
+  border-radius: 10px;
+  border: none;
+  padding-right: 50px;
+  background-size: 5vh;
+  background-position: 12px;
+  background-image: url('../../../media/images/searchbuttonblk.png');
+  background-repeat: no-repeat;
+}
+
+#search-pg-input:focus {
+  box-shadow: 0 0 3pt 2pt #a3e0e7;
+}
+
+.clear-search-pg-input-btn {
+  position: absolute;
+  background-image: url('../../../media/images/closebtn.png');
+  background-size: 4vh 4vh;
+  right: 10px;
+  z-index: 20;
+  width: 4vh;
+  height: 4vh;
+}
+
+.search-pg-results-container h6 {
+  font-family: "Questrial";
+  color: rgba(227, 227, 227, 0.612);
+  font-size: 15px;
+  margin: 0 0 10px 0;
+}
+
+
+@media screen and (max-width: 900px) {
+  .search-pg{width: 85%}
+  .search-pg-bar{width: 100%}
+}

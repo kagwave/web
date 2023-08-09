@@ -1,0 +1,145 @@
+.blog-post-pg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.blog-post {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  overflow-y: scroll;
+  scrollbar-color: white;
+}
+
+
+.blog-post-pg-header {
+  height: 50px;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-pg-nav {
+  position: absolute;
+  left: calc(3vw);
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-pg-nav p {
+  color: black;
+  font-family: 'Neo';
+  font-size: 15px;
+}
+
+.blog-post-hashtags {
+  position: absolute;
+  right: calc(3vw);
+  flex-direction: row;
+  display: flex;
+  align-items: center; 
+}
+
+.blog-post-hashtags h1 {
+  font-size: calc(12px + 0.3vw);
+  font-weight: lighter;
+}
+
+.blog-post-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+
+
+.blog-post h1 {
+  font-family: 'Questrial';
+  width: 90%;
+  color: black;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  font-size: calc(25px + 0.4vw);
+}
+
+.blog-post-info h2 {
+  font-family: 'Questrial';
+  color: black;
+  font-size: calc(10px + 0.3vw);
+  margin: 0;
+}
+
+.blog-post-info h3 {
+  font-family: 'Questrial';
+  color: black;
+  font-size: calc(9px + 0.2vw);
+  margin: 0;
+}
+
+
+.blog-post-main-image {
+  height: calc(150px + 12vw)
+}
+
+
+.blog-post-content {
+  margin-top: 30px;
+}
+
+.blog-post-paragraph {
+  font-size: 19px;
+  width: 90%;
+  margin: auto;
+  font-family: 'Questrial';
+  line-height: 150%;
+}
+
+.blog-post-footer { 
+  align-self: flex-start;
+  width: 90%;
+  margin: auto auto 30px auto;
+}
+
+.blog-post-footer h1 {
+  text-align: left;
+  font-size: 15px;
+  margin: 0 0 5px 0;
+  font-family: 'Abrade'
+}
+
+.blog-post-footer-link-btn {
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+
+.blog-post-feedback-section { 
+  align-self: flex-start;
+  width: 90%;
+  margin: auto auto 20px auto;
+}
+
+.blog-post-feedback-section h1 {
+  text-align: left;
+  font-size: 22px;
+  margin: 20px 0 20px 0;
+  font-family: 'Questrial'
+}
+
+.blog-post-reactions {
+  margin: 20px 0 20px 0;
+}
+
+
+@media screen and (max-width: 900px) {
+  .blog-post {width: 90%;}
+}

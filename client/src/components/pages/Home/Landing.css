@@ -1,0 +1,160 @@
+
+
+/*LANDING PAGE */
+
+.home-pg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 520px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.landingtext {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-image: url('https://f4.bcbits.com/img/0014047407_130.jpg');
+}
+ 
+.landing-h1 {
+  font-family: "Neo";
+  color: white;
+  font-size: 38px;
+  text-decoration: italic;
+  padding: 20px;
+}
+
+
+.landing-h2 {
+  font-family: 'Questrial';
+  color: rgb(199, 199, 199);
+  font-size: 13px;
+}
+
+
+.showafter {
+  display:none;
+}
+
+.latest-release {
+  min-height: 520px;
+  height: 100%;
+  width: 100%;
+  padding: 30px 0;
+  margin: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.latest-preview {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.latest-desc {
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.latest-desc p {
+  font-size: 10px;
+}
+
+.latest-text {
+  width: 90%;
+}
+
+.latest-links {
+  margin: 20px;
+}
+
+.latest-links button {
+  color: white;
+  background: inherit;
+  border: none;
+  margin: 5px;
+}
+
+
+@media (max-width: 900px) {
+  .latest-release {
+    flex-direction: column;
+  }
+  .landing {
+    height: 92vh;
+  }
+  .latest-preview{
+    width: 100%; margin: 30px 0 20px 0;
+  }
+  .latest-desc {
+    width: 100%; margin: 0px 0 10px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-h1{font-size: 4.2vh;}
+  .landing-h2{font-size: 1.3vh;}
+} 
+
+@media screen and (max-width: 500px) {
+  #promo {width: 100vw}
+  .latest-text h1{margin: 20px 0 20px 0;}
+  .latest-text h2{margin: 25px 0 10px 0 ;}
+}
+
+#promo::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+#promo::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+#promo::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+#promo:-webkit-media-controls {
+  display:none !important;
+}

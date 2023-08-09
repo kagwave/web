@@ -1,0 +1,74 @@
+.mission-pg {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  align-items: center;
+  margin: 20px 0 40px 0;
+}
+
+.mission-pg h1 {
+  text-align: center;
+  margin: 20px 0 20px 0;
+  font-family: "Neo";
+  color: rgb(99, 99, 99);
+  font-size: calc(25px + 0.5vw);
+}
+
+.mission-info {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 20px 0;
+  font-weight: lighter;
+}
+
+.mission-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-photo {
+  box-shadow: 0px 2px 10px 3px  #b2b5b5;
+  width: 100%;
+}
+
+.mission-statement {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.mission-statement h2 {
+  color: black;
+  font-family: "Abrade";
+  font-size: calc(15px + 0.5vw);
+  width: 85%;
+}
+
+.mission-statement h3 {
+  color: black;
+  font-family: "Questrial";
+  margin: 0;
+}
+
+.mission-learn-more-btn {
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.mission-learn-more-btn:hover {
+  color: gray
+}
+
+@media screen and (max-width: 900px){
+  .mission-info {flex-direction: column-reverse; margin: 10px 0 10px 0}
+  .mission-img {width: 100%;}
+  .mission-statement {width: 97%; margin: auto;}
+  .mission-statement h2 {width: 100%; text-align: center;}
+}

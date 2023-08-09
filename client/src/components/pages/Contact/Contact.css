@@ -1,0 +1,119 @@
+.contact-pg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-pg-header {
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: 'Neo';
+}
+
+.contact-box {
+  display:block;
+  border-radius: 5px;
+  background-color: inherit;
+  padding-top: 10px;
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+input[type=text], select, textarea {
+  width: 80%;
+  color: black;/* Full width */
+  padding: 12px;/* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 13px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=text]:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 1px #43CAEE;
+  outline: none;
+}
+
+input[type=text]::placeholder{
+  font-family: 'Aspergit';
+  font-weight: bold;
+  color: rgb(182, 182, 182);
+  left: 30px;
+}
+
+textarea::placeholder{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input, textarea {
+  font-family: "Questrial";
+  text-decoration: none;
+}
+
+/* Style the submit button with a specific background color etc */
+#submit {
+  font-family: 'Questrial';
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+  margin: 5px 0 10px 0; 
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button[type=submit]:hover {
+  background-color: #1b8baa;
+}
+
+
+.contact-info{
+  font-size: 13px;
+  color: white;
+}
+
+.message-info{
+  font-size: 15px;
+  color:white;
+}
+
+#inquiry {
+  font-family: "Questrial"
+}
+
+
+
+
+
+
+.success-pg {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+}
+
+.contact-success-pg h1 {
+  font-size: 30px;
+  margin: auto;
+  color: black;
+}
+
+.contact-success-pg p {
+  font-size: 10px;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-box{width: 80%;}
+}

@@ -1,0 +1,440 @@
+.profile-pg {
+  width: 100%;
+  background-color: #171d1e;
+  display: flex;
+  justify-content: center;
+  min-height: inherit;
+}
+
+.user-profile {
+  width:95%;
+  background-color: #171d1e;
+  min-height: inherit;
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
+
+.user-overview {
+  width: 25%;
+  min-width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-img {
+  display: flex;
+  padding: 0;
+  margin-top: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.user-img:hover {
+  opacity: 0.7;
+}
+
+.edit-user-img{
+  margin: auto;
+  position: relative;
+  opacity: 1;
+}
+
+.file-input {
+  margin: auto;
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+  opacity: 1;
+}
+
+.edit-img-btn {
+  margin: auto;
+  color: white;
+  display: flex;
+  cursor: pointer;
+}
+
+#edit-img-icon {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+
+.user-joined {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px 10px 10px;
+  width: 70%;
+}
+
+.user-joined h1 {
+  color: rgb(80, 80, 80);
+  font-size: calc(9px + 0.2vw);
+  margin: 0 0 5px 0;
+  font-family: "Questrial"
+}
+
+.user-joined h2 {
+  font-family: "Arial";
+  font-weight: normal;
+  font-size: calc(9px + 0.2vw);
+  margin: 0;
+  color: rgb(189, 189, 189);
+  text-align: center;
+}
+
+
+
+
+.user-information-container{
+  width: 75%;
+}
+
+.user-information { 
+  margin: 30px;
+}
+
+.user-information-toolbar { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.edit-btn {
+  margin: 0 0px 5px 0;
+  font-size: calc(7px + 0.4vw);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  font-family: "Questrial";
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.user-information-toolbar h1 { 
+  font-family: "Expansiva";
+  text-indent: 6px;
+  color: rgb(238, 238, 238);
+  font-size: calc(12px + 0.7vw)
+}
+
+
+
+.user-information-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-basic-info {
+  margin: 20px 0 20px 0;
+  max-width: 46%;
+}
+
+.profile-info-group{
+  margin: 25px 0 30px 0;
+  width: 100%;
+}
+
+
+.profile-info-group h1 {
+  font-family: "Questrial";
+  color: rgba(255, 255, 255, 0.536);
+  font-size: calc(15px + 0.5vw);
+  text-indent: 5px;
+}
+
+.profile-info-group h2 {
+  font-family: "Expansiva";
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+.profile-info-group h3 {
+  font-family: "Arial";
+  color: rgba(126, 126, 126, 0.536);
+  font-size: calc(10px + 0.5vw);
+  font-weight: normal;
+  text-indent: 5px;
+  margin: 0;
+}
+
+
+.input-container {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.name-field-container {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.name-field {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 50%;
+}
+
+.name-field h2 {
+  background: transparent;
+  font-size: 12px;
+  border: none;
+  display: inline;
+  font-family: "Questrial";
+  width: 45%;
+  margin: 0 0px 5px 0;
+  border-radius: 10px;
+  text-indent: 6px;
+  color: gray;
+}
+
+input[type="profile-name"] {
+  display: flex;
+  position: relative;
+  background: transparent;
+  height: 30px;
+  width: 90%;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  text-indent: 5px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  text-overflow: ellipsis;
+}
+
+input[type="profile"] {
+  background: transparent;
+  height: 30px;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  display: inline;
+  border-radius: 10px;
+  text-indent: 5px;
+  font-size: 18px;
+  color: white;
+  text-overflow: ellipsis;
+}
+
+input[type="profile"]::placeholder, input[type="profile-name"]::placeholder {
+  font-family: "Expansiva";
+  color: rgb(255, 255, 255);
+  font-size: calc(9px + 0.5vw);
+  text-indent: 3px;
+}
+
+input[type="profile-name"]:focus, input[type="profile"]:focus {
+  /*box-shadow: 0 0 0 1px #43CAEE;*/
+  outline: none;
+}
+
+
+
+
+
+#gender {
+  height: 30px;
+  width: 100%;
+  border: none;
+  display: inline;
+  border-radius: 10px;
+  text-indent: 3px;
+  font-size: 18px;
+  font-family: "questrial";
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.gender-option {
+  margin: 50px;
+  font-family: "Questrial";
+}
+
+
+#gender::selection {
+  color: white;
+  font-family: 10px;
+}
+
+#gender:focus {
+  box-shadow: 0 0 0 1px #43CAEE;
+  outline: none;
+}
+
+.profile-info-no-input {
+  font-family: "Expansiva";
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  text-indent: 7px;
+  margin: 5px 0 5px 0;
+}
+
+.hidden-profile-input {
+  display: none;
+}
+
+
+
+
+.user-extra-info {
+  margin: 20px 0 20px 0;
+  max-width: 46%;
+}
+
+#address-field-container {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+}
+
+.address-field {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.address-field h2{
+  background: transparent;
+  font-size: 12px;
+  border: none;
+  display: inline;
+  font-family: "Questrial";
+  width: 45%;
+  margin: 0 0px 5px 0;
+  border-radius: 10px;
+  text-indent: 6px;
+  color: gray;
+}
+
+
+
+
+
+
+
+.edit-account-options {
+  float: right;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.edit-account-options-btn {
+  color: white;
+  font-family: "Expansiva";
+  font-size: calc(8px + 0.3vw);
+  padding: calc(5px + 0.25vw);
+  margin: 0 0 0 4px;
+  border-radius: 10px;
+}
+
+.edit-account-options-btn:hover {
+  opacity: 0.9;
+}
+
+
+.connected-apps-container{
+  margin: 10px 0 10px 0;
+}
+.connected-app {
+  color: #212a2b;
+  padding: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  height: 25px;
+}
+
+#fbConnect {
+  border-radius: none;
+}
+
+
+
+/*Effects*/
+.draw-right {
+  animation: drawlineright 1s;
+  -webkit-animation: drawlineright 0.7s;
+  -moz-animation: drawlineright 0.7;
+  -o-animation: drawlineright 0.7s;
+  -ms-animation: drawlineright 0.7s;
+}
+
+@keyframes drawlineright {
+  0% {width:0%;}
+  100% {width:100%;}
+}
+
+
+/*Effects*/
+.draw-up {
+  animation: drawlineup 1s;
+  -webkit-animation: drawlineup 0.7s;
+  -moz-animation: drawlineup 0.7;
+  -o-animation: drawlineup 0.7s;
+  -ms-animation: drawlineup 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drawlineup {
+  0% {min-height:0%;}
+  100% {min-height:100%;}
+}
+
+.connectionResponse {
+  font-size: 13px;
+  text-indent: 6px;
+  color: white;
+  font-family: "Questrial";
+  animation: connectionResponse 4s;
+  -webkit-animation: connectionResponse 4s;
+  -moz-animation: connectionResponse 4s;
+  -o-animation: connectionResponse 4s;
+  -ms-animation: connectionResponse 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes connectionResponse {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
+
+
+@media screen and (max-width: 800px){
+  .user-profile{width: 100% }
+}
+
+@media screen and (max-width: 750px){
+  .user-profile{flex-direction: column; margin: 18px }
+  .info-sep{display: none;}
+  .user-information-container {width: 100%}
+  .user-information {margin: 15px 0px 15px 0px;}
+  .user-overview{width: 100%; align-items: center;}
+  .user-img{margin-top: 10px;}
+}
+

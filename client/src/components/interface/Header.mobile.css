@@ -1,0 +1,284 @@
+.header-bar-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 7vh;
+  opacity: 1;
+}
+
+.logo-mobile { 
+  border: none;
+  display: flex;
+  width: 3vh; 
+  height: 3vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  z-index: 3;
+}
+
+.logo-mobile:hover{
+  cursor: pointer;
+}
+
+.nav-dropbtn-mobile {
+  position: absolute;
+  display: block;
+  width: 3.5vh; 
+  height: 3.5vh;
+  background-repeat: no-repeat;
+  background-size: 3.5vh 3.5vh;
+  right: 15px;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-closed {
+  background-image: url('../../media/images/dropdownthin2.png');
+}
+
+.menu-open {
+  background-image: url('../../media/images/closethin.png');
+}
+
+
+
+#nav-menu-mobile {
+  position: fixed;
+  z-index: 3;
+  background: rgb(69, 69, 69);;
+  height: 93vh;
+  right: 0px;
+  min-width: 200px;
+  top: 7vh;
+}
+
+.menu-options-mobile{
+  text-align: center;
+  width: 100%;
+}
+
+.menu-options-mobile li{
+  width: 100%;
+  margin: auto; 
+  text-align: center;
+}
+
+.navlink-mobile {
+  color: white;
+  display: flex;
+  background-color: inherit; 
+  outline: none;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 4px;
+  text-decoration: none;
+  font-family: 'Abrade';
+  font-size: calc(16px + 0.5vw); 
+}
+
+.navlink-mobile:hover {
+  cursor: pointer;
+  color: #a3e0e7;
+}
+
+.navlink-mobile.active {
+  color: #a3e0e7;
+}
+
+
+  
+.search-bar-mobile {
+  width: 100%;
+  margin: 5px 0 13px 0;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=search] {
+  width: 85%;
+  height: 4vh;
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: none;
+  outline: none;
+  color: white;
+  text-indent: 10px;
+}
+::-ms-clear {
+  display: none;
+}
+
+/* Chrome */
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration { 
+  display: none; 
+}
+::-webkit-input-placeholder { 
+  color: #666; 
+  padding-left: 2px;
+  
+}
+
+.search-submit-btn-mobile {
+  z-index: 100;
+  height: 2.6vh;
+  width: 2.6vh;
+  position: absolute;
+  margin-top: 0.6vh;
+  right: 25px;
+  color: wheat;
+  background-image: url('../../media/images/searchbuttonthin.png');
+  background-size: 2.6vh 2.6vh;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+
+.user-panel-mobile-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.user-panel-mobile {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.user-panel-mobile h1 {
+  font-family: 'Questrial';
+  font-size: 14px;
+}
+
+
+
+.bottom-panel-mobile {
+  position: absolute;
+  display: flex;
+  bottom: 1vh;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info {
+  width: inherit;
+  justify-content: center;
+}
+
+
+.logInOut-btn-mobile {
+  color: white;
+  font-size: 13px;
+  float: right;
+  font-family: 'Expansiva';
+  border: none;
+  background-color: transparent;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+/*EFFECTS*/  
+  
+.slide-in-menu {
+  position: relative;
+  -webkit-animation-name: slideinmenu;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideinmenu;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slideinmenu {
+  from { right:-200px; opacity:0; background-color:  rgb(69, 69, 69) } 
+  to { right:0; opacity:1; background-color: rgb(13, 13, 13)}
+}
+
+@keyframes slideinmenu { 
+  from{ right:-200px; opacity:0; background-color:  rgb(69, 69, 69) } 
+  to{ right: 0; opacity:1; background-color: rgb(13, 13, 13) }
+}
+
+.slide-out-menu {
+  position: relative;
+  -webkit-animation-name: slideoutmenu;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideoutmenu;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slideoutmenu {
+  from { right:0px; opacity:1; background-color: rgb(13, 13, 13) } 
+  to { right:-200px; opacity:0; background-color: rgb(69, 69, 69); }
+}
+
+@keyframes slideoutmenu { 
+  from{ right:0; opacity:1; background-color: rgb(13, 13, 13)} 
+  to{ right:-200px; opacity:0; background-color: rgb(69, 69, 69) }
+}
+
+.active-header {
+  -webkit-animation-name: activecolor;
+  -webkit-animation-duration: 0.4s;
+  animation-name: activecolor;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes activecolor {
+  from { background-color: rgb(69, 69, 69) } 
+  to { background-color: rgb(13, 13, 13) }
+}
+
+@keyframes activecolor { 
+  from { background-color: rgb(69, 69, 69) } 
+  to { background-color: rgb(13, 13, 13) }
+}
+
+.nonactive-header {
+  -webkit-animation-name: nonactivecolor;
+  -webkit-animation-duration: 0.4s;
+  animation-name: nonactivecolor;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes nonactivecolor {
+  from { background-color: rgb(13, 13, 13) } 
+  to { background-color: rgb(69, 69, 69) }
+}
+
+@keyframes nonactivecolor { 
+  from { background-color: rgb(13, 13, 13) } 
+  to { background-color: rgb(69, 69, 69) }
+}

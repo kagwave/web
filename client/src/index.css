@@ -1,0 +1,470 @@
+/*
+UI Colors: 
+kagwave: #a3e0e7
+dark: #171d1e
+navy: #6b8d92
+*/
+
+
+
+html, body {
+  height: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+div, span, section,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+ 
+
+#page-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  min-height: calc(100vh - 165px);
+  min-width: 300px;
+}
+
+.inProgress {
+  background: url('./media/images/blueprint.png');
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.inProgressText {
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content-unavailable {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(249,249,249,255);
+  min-height: inherit;
+  background-image: url('media/images/gears-background.jpg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.progress-robot {
+  width: 50px;
+  height: 50px;
+  margin: 40px 10px 10px 10px;
+}
+
+.content-unavailable h1 {
+  font-size: 17px; 
+  margin: 10px;
+  text-align: center;
+  font-family: "Expansiva"; 
+}
+
+.content-unavailable p {
+  font-size: 12px;
+  margin: 10px;
+  text-align: center; 
+  font-family: "Aspergit"; 
+  color: black;
+}
+
+.not-found{
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #171d1e;
+}
+
+.not-logged-in {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+}
+.not-logged-in h1 {
+  font-family: "Expansiva";
+  color: white;
+  font-size: calc(25px + 0.5vw);
+  text-align: center;
+}
+.not-logged-in h2 {
+  font-family: "Expansiva";
+  color: white;
+  font-size: calc(10px + 0.5vw);
+  text-align: center;
+}
+
+.response {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Questrial";
+  color: red;
+  margin: 7px;
+}
+
+.close-btn {
+  right: 5px;
+  background-image: url();
+}
+
+
+
+
+/*BODY FORMAT*/
+body { 
+  position: relative;
+  background-color: white;
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 900px) {
+  #page-content { margin-top: 7vh; min-height: 92vh }
+}
+
+@media screen and (min-width: 900px) {
+  #page-content { margin-top: 0; }
+}
+
+@media screen and (max-width: 500px){
+  #page-content{min-height: 92vh}
+  .inProgress{min-height: 92vh}
+}
+
+
+hr {
+  border:none;
+  padding: 0;
+  margin: auto;
+  height:1px;
+  border-radius: 70%;
+  background:#A5E1E9;
+}
+
+#small-seperator{
+  width:50%; 
+  margin: auto;
+  height:1px;
+  border-radius: 4px;
+  background-color: #A5E1E9;
+}
+
+#smaller-seperator{
+  width:30%; 
+  margin: auto;
+  height:1px;
+  background-color: #A5E1E9;
+  border-radius: 4px;
+}
+
+#seperator{
+  width:100%;
+  margin: auto;
+  height:4px;
+  background-color: gray;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.audio-el {
+  display: none;
+}
+
+
+
+
+
+/*EFFECTS*/
+.ease-in-quick {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+.fade-in-quick {
+  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7;
+  -o-animation: fadeIn 0.7s;
+  -ms-animation: fadeIn 0.7s;
+}
+.fade-in-quickest {
+  animation: fadeIn 0.3s;
+  -webkit-animation: fadeIn 0.3s;
+  -moz-animation: fadeIn 0.3;
+  -o-animation: fadeIn 0.3s;
+  -ms-animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.fade-out {
+  animation: fadeOut 2s;
+  -webkit-animation: fadeOut 2s;
+  -moz-animation: fadeOut 2;
+  -o-animation: fadeOut 2s;
+  -ms-animation: fadeOut 2s;
+  animation: forwards;
+}
+.fade-out-quick {
+  animation: fadeOut 0.7s;
+  -webkit-animation: fadeOut 0.7s;
+  -moz-animation: fadeOut 0.7s;
+  -o-animation: fadeOut 0.7s;
+  -ms-animation: fadeOut 0.7s;
+  animation: forwards;
+}
+.fade-out-quickest {
+  animation: fadeOut 0.3s;
+  -webkit-animation: fadeOut 0.3s;
+  -moz-animation: fadeOut 0.3s;
+  -o-animation: fadeOut 0.3s;
+  -ms-animation: fadeOut 0.3s;
+  animation: forwards;
+}
+@keyframes fadeOut {
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+
+.fade-in-modal {
+  animation: fadeInModal 0.4s;
+  -webkit-animation: fadeInModal 0.4s;
+  -moz-animation: fadeInModal 0.4;
+  -o-animation: fadeInModal 0.4s;
+  -ms-animation: fadeInModal 0.4s;
+}
+@keyframes fadeInModal {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+}
+
+.fade-out-modal {
+  animation: fadeOutModal 0.4s;
+  -webkit-animation: fadeOutModal 0.4s;
+  -moz-animation: fadeOutModal 0.4;
+  -o-animation: fadeOutModal 0.4s;
+  -ms-animation: fadeOutModal 0.4s;
+}
+@keyframes fadeOutModal {
+  0% {opacity:0.8;}
+  100% {opacity:0;}
+}
+
+.animate-top {
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 1s;
+  animation-name: animatetop;
+  animation-duration: 1s
+}
+@-webkit-keyframes animatetop {
+  from { top:-100px; opacity:0 } 
+  to { top:0px; opacity:1 }
+}
+@keyframes animatetop { 
+  from{ top:-100px; opacity:0 } 
+  to{ top:0; opacity:1 }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+.animate-right {
+  position: relative;
+  -webkit-animation-name: animateright;
+  -webkit-animation-duration: 1s;
+  animation-name: animateright;
+  animation-duration: 1s
+}
+@-webkit-keyframes animateright {
+  from { right:-100px; opacity:0 } 
+  to { right:0px; opacity:1 }
+}
+@keyframes animateright { 
+  from{ right:-100px; opacity:0 } 
+  to{ right:0; opacity:1 }
+}
+
+.animate-left {
+  position: relative;
+  -webkit-animation-name: animateleft;
+  -webkit-animation-duration: 1s;
+  animation-name: animateleft;
+  animation-duration: 1s
+}
+@-webkit-keyframes animateleft {
+  from { left:-100px; opacity:0 } 
+  to { left:0px; opacity:1 }
+}
+@keyframes animateleft { 
+  from{ left:-100px; opacity:0 } 
+  to{ left:0; opacity:1 }
+}
+
+
+
+
+.freespace {
+  width: 4px;
+}
+.hide-element{
+  display: none;
+}
+.show-element{
+  display: flex;
+}
+.show-blockelement{
+  display: block;
+}
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2px; 
+}
+.nav-btn:hover{
+  color: #A5E1E9;
+  transition: color 0.1s ease-in-out;
+}
+
+
+/* BLUR */
+.blur-effect {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/*Effects*/
+
+
+.draw-up {
+  animation: drawlineup 1s;
+  -webkit-animation: drawlineup 0.7s;
+  -moz-animation: drawlineup 0.7;
+  -o-animation: drawlineup 0.7s;
+  -ms-animation: drawlineup 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes drawlineup {
+  0% {min-height:0%;}
+  100% {min-height:100%;}
+}
+
+.draw-up-modal {
+  animation: drawlineupmodal 1s;
+  -webkit-animation: drawlineupmodal 0.7s;
+  -moz-animation: drawlineupmodal 0.7;
+  -o-animation: drawlineupmodal 0.7s;
+  -ms-animation: drawlineupmodal 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes drawlineupmodal {
+  0% {min-height:0%;}
+  100% {min-height:80%;}
+}
+
+.draw-right {
+  animation: drawlineright 1s;
+  -webkit-animation: drawlineright 0.7s;
+  -moz-animation: drawlineright 0.7;
+  -o-animation: drawlineright 0.7s;
+  -ms-animation: drawlineright 0.7s;
+}
+@keyframes drawlineright {
+  0% {width:0%; }
+  100% {width:100%; }
+}
+
+.animate-top {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+.animate-top-reverse {
+  -webkit-animation-name: animatetopreverse;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetopreverse;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes animatetopreverse {
+  from {top:0; opacity:1}
+  to {top:-300px; opacity:0} 
+}
+@keyframes animatetopreverse {
+  from {top:0; opacity:1}
+  to {top:-300px; opacity:0}
+}
