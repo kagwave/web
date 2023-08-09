@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "concurrently \"npm run server --prefix server\" \"npm run start --prefix client\" ",
-    "deploy": "git add . && git commit -am update && git push origin main"
+    "deploy": "git add . && git commit -am update && git push origin main",
+    "install": "concurrently \"npm install --prefix server\" \"npm install --prefix client\" "
   },
   "engines": {
     "node": "v18.14.2",

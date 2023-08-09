@@ -63,17 +63,19 @@ input, textarea {
 /* Style the submit button with a specific background color etc */
 #submit {
   font-family: 'Questrial';
-  color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer; 
   margin: 5px 0 10px 0; 
+  background-color: transparent;
+  color: #1b8baa;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
   background-color: #1b8baa;
+  color: white;
 }
 
 

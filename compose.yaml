@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: "kagwave/frontend"
+    ports:
+      - 3000:3000
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    env_file:
+      "./client/.env"
+    depends_on:
+      - backend  
+
+  backend:
+    image: "kagwave/backend"
+    ports:
+     - 8080:8080
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+      args:
+        - NODE_ENV=development
+        - DOCKER=true
+    env_file:
+        "./server/.env"
+    environment:
+      - NODE_ENV=development
+      - DOCKER=true
+    volumes:
+      - /web/server/node_modules
+      - ./server:/web/server
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "http://backend:8080"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27018:27017
+    restart: always
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017 --quiet
+      interval: 20s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    build:
+      context: ./infra/nginx
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./infra/nginx/dev.conf:/etc/infra/nginx/dev.conf
+    depends_on:
+      backend:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      frontend:
+        condition: service_started
+
+
+volumes: 
+  db:
+  cache:
+
+networks:
+  kagwave: 
+    driver: bridge

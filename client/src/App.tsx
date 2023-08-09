@@ -90,14 +90,12 @@ function App() {
     <div className="App">
 
       {dimensions.width > breakpoint ? 
-
         (!location.pathname.includes('/login') &&
           <>
             <Header/>
             <Navbar searchCallback={searchCallback}/>
           </>
         )
-        
       : 
         <HeaderMobile searchCallback={searchCallback}/>
       }

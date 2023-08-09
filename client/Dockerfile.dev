@@ -1,0 +1,17 @@
+FROM node:18.14.2
+
+LABEL version="1.0"
+LABEL description="Front End Docker Image Kagwave.com - React"
+LABEL maintainer = ["contact@kagwave.com"]
+
+WORKDIR /client
+
+COPY package*.json .
+
+RUN npm install --silent
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
