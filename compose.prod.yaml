@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   frontend:
-    image: "gamewe/frontend"
+    image: "kagwave/frontend"
     ports:
       - 3000:3000
     build:
@@ -15,7 +15,7 @@ services:
       - backend
           
   backend:
-    image: "gamewe/backend"
+    image: "kagwave/backend"
     ports:
       - 8080:8080
     build:
@@ -122,5 +122,5 @@ volumes:
   cache:
 
 networks:
-  gamewe: 
+  kagwave: 
     driver: bridge

@@ -425,7 +425,7 @@ const Account = (props) => {
 
                     <div className="profile-info-group">
                       <NavLink to="/world/profile" style={{textDecoration: 'none'}}>
-                        <h3> Your Gamewe Account <FontAwesomeIcon icon={faChevronRight}/></h3>
+                        <h3> Your kagwave Account <FontAwesomeIcon icon={faChevronRight}/></h3>
                       </NavLink>
                     </div>
 

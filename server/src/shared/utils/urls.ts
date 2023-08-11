@@ -21,7 +21,7 @@ export const hostUrl = (process.env.NODE_ENV === 'production')
 : "http://localhost:3000";
 
 export const websocketUrl = (process.env.NODE_ENV === 'production') 
-? `wss://gamewe-web.herokuapp.com`
+? `wss://kagwave-web.herokuapp.com`
 : `ws://localhost:8080` ;
 
 

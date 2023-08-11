@@ -1,8 +1,8 @@
 FROM node:18.14.2
 
 LABEL version="1.0"
-LABEL description="Backend Docker Image Gamewe Web - Node"
-LABEL maintainer = ["contact@gamewe.world"]
+LABEL description="Backend Docker Image kagwave Web - Node"
+LABEL maintainer = ["contact@kagwave.com"]
 
 WORKDIR /server/src/services/auth
 

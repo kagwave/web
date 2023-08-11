@@ -75,7 +75,7 @@ class App {
     this.app.use(require('cookie-parser')());
     this.app.use(require('body-parser').urlencoded({ extended: false }));
     this.app.use(session({
-      secret: 'gamewe',
+      secret: 'kagwave',
       resave: false,
       saveUninitialized: true,
       rolling: true,

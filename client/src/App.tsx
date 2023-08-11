@@ -51,7 +51,6 @@ function App() {
   const history = useHistory();
   const dispatch = useDispatch();
 
-
   useEffect(() => {
     AOS.init({
       duration : 2000,
@@ -99,7 +98,6 @@ function App() {
       : 
         <HeaderMobile searchCallback={searchCallback}/>
       }
-
 
       <Switch>
 
@@ -161,7 +159,6 @@ function App() {
 
 
       </Switch> 
-
 
       <Footer />
 
