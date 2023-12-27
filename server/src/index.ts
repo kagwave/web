@@ -1,32 +1,21 @@
-import authService from "./services/auth/index";
+import dotenv from 'dotenv';
+dotenv.config();
 
-"use strict"
+import { ServiceConfig, ServiceMetadata } from "./types/services";
 
-require("ignore-styles");
+import App from "./App";
+import router from './routes/*';
 
-require("@babel/register")({
-  ignore: [/(node_modules)/],
-  presets: [
-    "@babel/preset-react" , 
-    "@babel/preset-env" , 
-    "@babel/preset-typescript"
-   ],
-   plugins: [
-    "@babel/plugin-transform-runtime",
-    "@babel/plugin-proposal-class-properties",
-    [
-      "transform-assets",
-      {
-        "extensions": [
-          "css",
-          "svg",
-          'mp3',
-        ],
-        "name" : "static/media/[name].[hash:8].[ext]"
-      }
-    ]
-  ]
-})
+const config: ServiceConfig = {
+  port: 8080,
+  ssl: null,
+  router: router
+}
 
+const metadata: ServiceMetadata = {
+  id: 'Kagwave',
+  name: 'Main',
+}
 
-authService.start();
+const app = new App(config, metadata);
+app.start();

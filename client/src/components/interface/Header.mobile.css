@@ -40,6 +40,7 @@
   box-shadow: none !important;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .menu-closed {
@@ -49,8 +50,6 @@
 .menu-open {
   background-image: url('../../media/images/closethin.png');
 }
-
-
 
 #nav-menu-mobile {
   position: fixed;
@@ -95,7 +94,6 @@
 .navlink-mobile.active {
   color: #a3e0e7;
 }
-
 
   
 .search-bar-mobile {
@@ -208,7 +206,6 @@ input[type=search] {
   
   
 /*EFFECTS*/  
-  
 .slide-in-menu {
   position: relative;
   -webkit-animation-name: slideinmenu;
@@ -217,15 +214,13 @@ input[type=search] {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes slideinmenu {
-  from { right:-200px; opacity:0; background-color:  rgb(69, 69, 69) } 
-  to { right:0; opacity:1; background-color: rgb(13, 13, 13)}
+  from{ right:-200px; opacity:0; background-color: rgb(13, 13, 13)  rgb(69, 69, 69) } 
+  to{ right: 0; opacity:1; background-color: rgb(69, 69, 69) }
 }
-
 @keyframes slideinmenu { 
-  from{ right:-200px; opacity:0; background-color:  rgb(69, 69, 69) } 
-  to{ right: 0; opacity:1; background-color: rgb(13, 13, 13) }
+  from{ right:-200px; opacity:0; background-color: rgb(13, 13, 13)  rgb(69, 69, 69) } 
+  to{ right: 0; opacity:1; background-color: rgb(69, 69, 69) }
 }
 
 .slide-out-menu {
@@ -236,15 +231,13 @@ input[type=search] {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes slideoutmenu {
-  from { right:0px; opacity:1; background-color: rgb(13, 13, 13) } 
-  to { right:-200px; opacity:0; background-color: rgb(69, 69, 69); }
+  from { right:0; opacity:1; background-color: rgb(69, 69, 69) } 
+  to { right:-200px; opacity:0; background-color: rgb(13, 13, 13) }
 }
-
 @keyframes slideoutmenu { 
-  from{ right:0; opacity:1; background-color: rgb(13, 13, 13)} 
-  to{ right:-200px; opacity:0; background-color: rgb(69, 69, 69) }
+  from{ right:0; opacity:1; background-color: rgb(69, 69, 69) } 
+  to{ right:-200px; opacity:0; background-color: rgb(13, 13, 13) }
 }
 
 .active-header {
@@ -254,15 +247,13 @@ input[type=search] {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes activecolor {
-  from { background-color: rgb(69, 69, 69) } 
-  to { background-color: rgb(13, 13, 13) }
+  from { background-color: rgb(13, 13, 13) }
+  to { background-color: rgb(69, 69, 69) } 
 }
-
 @keyframes activecolor { 
-  from { background-color: rgb(69, 69, 69) } 
-  to { background-color: rgb(13, 13, 13) }
+  from { background-color: rgb(13, 13, 13) }
+  to { background-color: rgb(69, 69, 69) } 
 }
 
 .nonactive-header {
@@ -272,13 +263,11 @@ input[type=search] {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes nonactivecolor {
-  from { background-color: rgb(13, 13, 13) } 
-  to { background-color: rgb(69, 69, 69) }
+  from { background-color: rgb(69, 69, 69) } 
+  to { background-color: rgb(13, 13, 13) }
 }
-
 @keyframes nonactivecolor { 
-  from { background-color: rgb(13, 13, 13) } 
-  to { background-color: rgb(69, 69, 69) }
+  from { background-color: rgb(69, 69, 69) } 
+  to { background-color: rgb(13, 13, 13) }
 }

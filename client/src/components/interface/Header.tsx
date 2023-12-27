@@ -1,7 +1,7 @@
 import './Header.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import logo from '../../media/images/ico.png';
@@ -11,7 +11,7 @@ import { serverUrl } from '../../utils/urls';
 
 const Header = (props: any) => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { user, isLoggedIn } = useSelector((state: any) => state.auth);
   
@@ -45,7 +45,7 @@ const Header = (props: any) => {
 
   const logInOut = () => {
     if (!isLoggedIn){
-      history.push('/login');
+      navigate('/login');
     } else if (isLoggedIn){
       window.open(`${serverUrl}/logout`, '_self');
     }
@@ -56,17 +56,17 @@ const Header = (props: any) => {
       return (
         <div className="user-info">
           <div style={{textAlign: 'right'}}>
-            <span style={{fontFamily: 'Aspergit', fontStyle: 'bold', fontSize: '16px', cursor: 'pointer'}} onClick={() => history.push('/me')}>
+            <span style={{fontFamily: 'Aspergit', fontStyle: 'bold', fontSize: '16px', cursor: 'pointer'}} onClick={() => navigate('/me')}>
               {accountHeader ? accountHeader.display_name : null}   
             </span>
             <span>  </span>
-            <button onClick={() => history.push('/me')}
+            <button onClick={() => navigate('/me')}
               style={{color: '#6b8d92', position: 'relative', padding: '3px', marginRight: '0'}}>
                 <img src={accountHeader ? accountHeader.profile_photo : null} alt={accountHeader ? accountHeader.display_name : null} width="40px" height="40px"></img>
             </button>
           </div>
           
-          <div id="useremail" onClick={() => history.push('/me')}>
+          <div id="useremail" onClick={() => navigate('/me')}>
             {accountHeader ? accountHeader.email : null}
           </div>
         </div>

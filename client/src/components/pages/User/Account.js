@@ -2,7 +2,7 @@ import './Account.css'
 import axios from 'axios';
 
 import { useEffect, useState, useRef } from "react";
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import MountDisplay from '../../interface/tools/MountDisplay';
 import ConnectedApps from './ConnectedApps';
@@ -18,7 +18,7 @@ const serverUrl = (process.env.NODE_ENV === 'development')
 const Account = (props) => {
 
   const { user, isLoggedIn } = props;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [editedInfo, setEditedInfo] = useState({});
   const [toolbarTitle, setToolbarTitle] = useState('Your Account');
@@ -442,7 +442,7 @@ const Account = (props) => {
 
           <div className="not-logged-in fade-in-quick">
             <h1>You are not logged in.</h1>
-            <span style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}} onClick={() => history.push('/login')}>
+            <span style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}} onClick={() => navigate('/login')}>
               <h2> Sign in to access your profile.&nbsp;</h2>
               <FontAwesomeIcon icon={faChevronRight} color="white"/>
             </span>

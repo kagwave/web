@@ -1,25 +1,24 @@
 import './Header.mobile.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import MountDisplay from './tools/MountDisplay';
+import { serverUrl } from '../../utils/urls';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../media/images/ico.png';
 
-const serverUrl = (process.env.NODE_ENV === 'development') 
-? 'http://localhost:8080'
-: 'https://www.kagwave.com';
+
 
 const HeaderMobile = (props: any) => {
 
   const { searchCallback } = props;
   const { user, isLoggedIn } = useSelector((state: any) => state.auth);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [wasVideoPlaying, setwasVideoPlaying] = useState(false);
@@ -32,10 +31,6 @@ const HeaderMobile = (props: any) => {
   var footer = document.getElementById("footer-container");
 
   useEffect(() => {
-
-    let searchbtn = document.querySelector('.search-submit-btn-mobile');
-    let searchInput = document.getElementById('search-input');
-
     if (document.getElementById('page-content') !== null){
       document.getElementById('page-content')!.classList.remove('realign-body');
     };
@@ -156,7 +151,7 @@ const HeaderMobile = (props: any) => {
 
       <img className="logo-mobile" 
         src={logo} alt="Kagwave™"
-        onClick={() => {history.push('/'); closeMenu()}}
+        onClick={() => {navigate('/'); closeMenu()}}
       ></img>
 
       <button className="nav-dropbtn-mobile menu-closed"
@@ -176,7 +171,7 @@ const HeaderMobile = (props: any) => {
 
         <div className="menu-options-mobile">
           <ul style={{listStyleType: "none", padding: "0 0 0 2vh", marginTop: '10px', textAlign: "center"}}>
-            <li><NavLink className="navlink-mobile" onClick={closeMenu} to="/" exact={true}>Home</NavLink></li>
+            <li><NavLink className="navlink-mobile" onClick={closeMenu} to="/">Home</NavLink></li>
             <li><NavLink className="navlink-mobile" onClick={closeMenu} to="/sound">Sound</NavLink></li>
             <li><NavLink className="navlink-mobile" onClick={closeMenu} to="/products">Products</NavLink></li>
             <li><NavLink className="navlink-mobile" onClick={closeMenu} to="/store">Store</NavLink></li>
@@ -207,7 +202,7 @@ const HeaderMobile = (props: any) => {
           <div className="logInOut-options-mobile"> 
             {!isLoggedIn ? 
 
-              <button style = {{marginBottom:'2vh'}}  className="logInOut-btn-mobile" onClick={() => { history.push('/login'); closeMenu();}}>
+              <button style = {{marginBottom:'2vh'}}  className="logInOut-btn-mobile" onClick={() => { navigate('/login'); closeMenu();}}>
                 Login <FontAwesomeIcon icon={faDoorOpen} color="white" size='lg'/>
               </button> 
               

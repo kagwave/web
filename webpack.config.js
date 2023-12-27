@@ -1,17 +1,26 @@
-import webpack from 'webpack';
 import path from 'path';
-import nodeExternals from 'webpack-node-externals';
-import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 const clientConfig = {
   entry: './client/src/index.tsx',
   output: {
-      path: path.resolve(__dirname, './dist'),
-      filename: 'public/client.bundle.js'
+    path: path.resolve(__dirname, './dist'),
+    filename: 'public/client.bundle.js',
   },
   module: {
     rules: [
-      {/*test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader'*/},
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: 'ts-loader',
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
       {
         test: /\.(png|jpe?g|gif|jp2|webp)$/,
         loader: 'file-loader',
@@ -19,22 +28,12 @@ const clientConfig = {
           name: '[name].[ext]',
         },
       },
-      { test: /\.(t|j)sx?$/, use: { loader: 'ts-loader' }, exclude: /node_modules/ },
-      { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" }
-    ]
-  },  
-  resolve: {
-    extensions: ['.js', '.less', '.ts', '.tsx'], 
-    /*fallback: {
-      "fs": require.resolve("fs-browserify"),
-      "path": require.resolve("path-browserify"),
-      "zlib": require.resolve("browserify-zlib"),
-      "stream": require.resolve("stream-browserify")
-    },*/
+    ],
   },
-  plugins: [
-		new NodePolyfillPlugin()
-	],
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+  plugins: [new NodePolyfillPlugin()],
 };
 
 const serverConfig = {
@@ -44,38 +43,32 @@ const serverConfig = {
   externals: [nodeExternals()],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'server.bundle.js'
+    filename: 'server.bundle.js',
   },
   module: {
     rules: [
-      {/*test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader'*/},
       {
-        test: /\.(png|jpe?g|gif|jp2|webp|mp3|mp4)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-        },
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: 'ts-loader',
       },
-      { test: /\.(t|j)sx?$/, use: { loader: 'ts-loader' }, exclude: /node_modules/ },
-      { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" }
-    ]
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
+    ],
   },
   resolve: {
-    extensions: ['.js', '.less', '.ts', '.tsx'], 
-    /*fallback: {
-      "fs": require.resolve("fs-browserify"),
-      "path": require.resolve("path-browserify"),
-      "zlib": require.resolve("browserify-zlib"),
-      "stream": require.resolve("stream-browserify")
-    },*/
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   plugins: [
     new webpack.BannerPlugin({
       banner: 'require("source-map-support").install();',
       raw: true,
-      entryOnly: false
+      entryOnly: false,
     }),
-    new NodePolyfillPlugin()
+    new NodePolyfillPlugin(),
   ],
 };
 

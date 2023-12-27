@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { useEffect, useRef, useState } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,7 @@ const Navbar = (props: any) => {
 
   const { searchCallback } = props;
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   const firstUpdate = useRef(true);
 
@@ -131,21 +131,21 @@ const Navbar = (props: any) => {
 
         <div className="home-btn-container">
           <button className="home-btn home-img" 
-            onClick={() => history.push('/')}
+            onClick={() => navigate('/')}
           ></button>
         </div>
 
         <div className="sound-dropdown navlink">
           <NavLink to="/sound" className="sound-dropbtn"
-            //onClick={() => {history.push('/sound')}}
+            //onClick={() => {navigate('/sound')}}
           >Sound
           <span className="freespace"></span>
           <FontAwesomeIcon className="caret" icon={faCaretDown} size="xs"/>
           </NavLink>
           <div className="sound-dropdown-content fade-in-quick" style={{marginTop: 5 - navDistFromTop}}>
             <div className="menu-gap-fill"></div>
-            <NavLink className="navlink" exact to="/sound">🌀  Fibonacci</NavLink>
-            <NavLink className="navlink" exact to="/sound/kings-quest">👑  King's Quest™</NavLink>
+            <NavLink className="navlink" to="/sound">🌀  Fibonacci</NavLink>
+            <NavLink className="navlink" to="/sound/kings-quest">👑  King's Quest™</NavLink>
             {/*<NavLink className="navlink" to="/sound/collaborations">Collaborations</NavLink>*/}
           </div>
         </div>

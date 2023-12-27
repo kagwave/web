@@ -1,7 +1,7 @@
 import './Landing.css';
 
 import { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 import { Waypoint } from 'react-waypoint';
 import MountDisplay from '../../interface/tools/MountDisplay';
@@ -11,9 +11,9 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import eclipsepromo from '../../../media/video/EclipsePromo.mp4';
 
 
-const Landing = (props: any) => {
+const Landing = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     MountDisplay(undefined, undefined);
@@ -72,7 +72,7 @@ const Landing = (props: any) => {
               <p data-aos="fade-in" style={{fontSize: "9px", fontFamily: 'Aspergit', fontStyle: 'italic', fontWeight: 'bold', textDecoration: "italic", margin: '5px', color:'gray'}}>In select stores only. Subscription may be required.</p>
             </div>
             <div data-aos="fade-in" className="latest-links">
-              <button onClick={() => history.push('/sound')}>Learn More
+              <button onClick={() => navigate('/sound')}>Learn More
                 <FontAwesomeIcon icon={faChevronRight} color="white" style={{padding: "0 5px 0 5px"}}/>
               </button>
               <button onClick={() => window.open('http://fanlink.to/eclipseep', '_blank')}>Buy

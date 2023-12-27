@@ -1,8 +1,8 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const PageNotFound = (props: any) => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (  
     <div id="page-content">
@@ -14,7 +14,7 @@ const PageNotFound = (props: any) => {
           404 Error: The requested /url destination cannot be found.
         </h2>
         <button style={{color: 'white', margin: '8px'}}
-          onClick={() => history.push('/')}>
+          onClick={() => navigate('/')}>
           Go Home
         </button>
       </div>

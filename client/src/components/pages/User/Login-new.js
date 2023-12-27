@@ -1,7 +1,7 @@
 import './Login.css'
 import axios from 'axios';
 import { useState, useEffect } from "react";
-import { useHistory, NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 import MountDisplay from '../../interface/tools/MountDisplay';
 
@@ -16,7 +16,7 @@ const serverUrl = (process.env.NODE_ENV === 'development')
 
 const Login = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [loginInfo, setLoginInfo] = useState({email: null, password: null});
   const [loginResponse, setLoginResponse] = useState();
@@ -68,7 +68,7 @@ const Login = () => {
 
         <img className="logo" style={{width: '100px', height: '100px', margin: '5px', cursor: 'pointer'}} 
           src={logo} alt="Kagwave™ Logo"
-          onClick={() => history.push('/')}>
+          onClick={() => navigate('/')}>
         </img>
 
       

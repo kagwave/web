@@ -1,7 +1,7 @@
 import './Services.css';
 
 import { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ import MountDisplay from '../../interface/tools/MountDisplay';
 
 const Services = (props: any) => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -48,7 +48,7 @@ const Services = (props: any) => {
                 
                 <div className="service-desc">
                   <div className="service-desc-text">🎞️ Original audio for advertisements, film, and games.</div>
-                  <button className="more-btn-arrow" onClick={() => history.push('/contact')}>
+                  <button className="more-btn-arrow" onClick={() => navigate('/contact')}>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"></FontAwesomeIcon>
                   </button>
                 
@@ -60,7 +60,7 @@ const Services = (props: any) => {
 
               <div className="service-desc">
                 <div className="service-desc-text">🔗 Let's work together.</div>
-                <button className="more-btn-arrow" onClick={() => history.push('/contact')}>
+                <button className="more-btn-arrow" onClick={() => navigate('/contact')}>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"></FontAwesomeIcon>
                   </button>
                 
@@ -71,7 +71,7 @@ const Services = (props: any) => {
               <div className="collapsed-content">
               <div className="service-desc">
                 <div className="service-desc-text">📈 Growing your business/product utilizing tailored marketing techniques.</div>
-                <button className="more-btn-arrow" onClick={() => history.push('/contact')}>
+                <button className="more-btn-arrow" onClick={() => navigate('/contact')}>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"></FontAwesomeIcon>
                   </button>
                 
@@ -81,7 +81,7 @@ const Services = (props: any) => {
               <div className="collapsed-content">
               <div className="service-desc">
                 <div className="service-desc-text">🎙️ Studio-quality audio editing, processing, and post-production.</div>
-                <button className="more-btn-arrow" onClick={() => history.push('/contact')}>
+                <button className="more-btn-arrow" onClick={() => navigate('/contact')}>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"></FontAwesomeIcon>
                   </button>
 
@@ -92,7 +92,7 @@ const Services = (props: any) => {
               <div className="collapsed-content">
               <div className="service-desc">
                 <div className="service-desc-text">🎉 Let's make your next event one to remember.</div>
-                <button className="more-btn-arrow" onClick={() => history.push('/contact')}>
+                <button className="more-btn-arrow" onClick={() => navigate('/contact')}>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"></FontAwesomeIcon>
                   </button>
                 

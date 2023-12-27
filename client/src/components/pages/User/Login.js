@@ -1,6 +1,6 @@
 import './Login.css'
 import { useState, useEffect } from "react";
-import { useHistory, NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 import MountDisplay from '../../interface/tools/MountDisplay';
 
@@ -13,7 +13,7 @@ import { serverUrl } from '../../../utils/urls';
 
 const Login = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const [loginResponse, setLoginResponse] = useState();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Login = () => {
         document.getElementById('signin-btn').style.margin = '15px';
       }
       if (data.status === "Login successful.") {
-        history.push('/profile')
+        navigate('/profile')
       }
     })
     .catch((error) => {
@@ -52,7 +52,7 @@ const Login = () => {
 
         <img className="logo" style={{width: '100px', height: '100px', margin: '5px', cursor: 'pointer'}} 
           src={logo} alt="Kagwave™ Logo"
-          onClick={() => history.push('/')}>
+          onClick={() => navigate('/')}>
         </img>
 
       

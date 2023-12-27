@@ -1,6 +1,6 @@
 import './Search.css';
 import { useState, useEffect } from 'react';
-import { Route, useLocation, useHistory } from 'react-router-dom';
+import { Route, useLocation, useNavigate } from 'react-router-dom';
 
 import MountDisplay from '../../interface/tools/MountDisplay'
 
@@ -16,7 +16,7 @@ const Search = (props) => {
 
   const { user, match } = props;
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [query, setQuery] = useState();
   const [results, setResults] = useState();
@@ -54,7 +54,7 @@ const Search = (props) => {
             onClick={() => {
               setQuery(); 
               if (location.pathname !== '/search') {
-                history.push('/search');
+                navigate('/search');
               } 
               document.getElementById('search-pg-input').focus()}}>
           </button>}

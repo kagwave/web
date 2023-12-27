@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "react-app",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-private-property-in-object"
+  ]
+}

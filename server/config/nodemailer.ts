@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv'
 import Mail from 'nodemailer/lib/mailer';
+import express from 'express';
 dotenv.config();
 
 
@@ -24,16 +25,16 @@ smtpTransport.verify(function(error, success) {
   }
 });
 
-module.exports = function(app) {
+module.exports = function(app: express.Application) {
 
   app.post('/contact', (req, res, next) => {
-    console.log(req.body);
-    var name = req.body.name;
-    var email = req.body.email;
-    var subject = "[inquiry] " + req.body.company + " / " + req.body.inquiry;
-    var message = req.body.message ;
+    
+    let name = req.body.name;
+    let email = req.body.email;
+    let subject = "[inquiry] " + req.body.company + " / " + req.body.inquiry;
+    let message = req.body.message ;
 
-    var body = message + '<br><br>' + "— " + name + '<br>' + email
+    let body = message + '<br><br>' + "— " + name + '<br>' + email
 
     var mailOptions = {
       from: 'contact@kagwave.com',

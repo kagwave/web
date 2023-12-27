@@ -1,13 +1,9 @@
-@media screen and (max-width: 1000px) {
-  #footer { flex-wrap: wrap; flex-direction: column;}
-}
-
-#footer-container{
+#footer{
   background-color: rgb(19, 19, 19);;
   position: relative;
 }
 
-#footer {
+#footer-container{
   border: none;
   width: 75%;
   margin: auto;
@@ -137,4 +133,9 @@
   border-radius: 5px;
   width: 30px;
   height: 30px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #footer-container { flex-wrap: wrap; flex-direction: column;}
 }

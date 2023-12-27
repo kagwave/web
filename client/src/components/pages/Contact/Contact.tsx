@@ -3,21 +3,18 @@ import './Contact.css';
 import axios from 'axios';
 
 import { useEffect, useState } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom'
+import { Route, useNavigate } from 'react-router-dom'
 
 import MountDisplay from '../../interface/tools/MountDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-
-const serverUrl = (process.env.NODE_ENV === 'development') 
-? 'http://localhost:8080'
-: 'https://www.kagwave.com';
+import { serverUrl } from '../../../utils/urls';
 
 const Contact = (props: any) => {
 
   const { match } = props;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [contactForm, setContactForm] = useState<any>({
     name: '', 
@@ -67,7 +64,7 @@ const Contact = (props: any) => {
     try {
       let response = await axios.post(`${serverUrl}/contact`, contactForm);
       if (response.data.status === 'Success'){
-        history.push(`${match.url}/success`);
+        navigate(`${match.url}/success`);
         setIsSending('sent');
       } 
     } catch (err) {
@@ -92,7 +89,7 @@ const Contact = (props: any) => {
 
       <div className="contact-pg fade-in">
 
-      <Route exact path={`${match.url}`} render={() => <>
+      <Route path={`${match.url}`} element={<>
         <div className="contact-pg-header">
           Get in touch.
         </div>
@@ -144,7 +141,7 @@ const Contact = (props: any) => {
       </>}/>
 
       {isSending === 'sent' &&
-        <Route exact path={`${match.url}/success`} render={() => 
+        <Route path={`${match.url}/success`} element={ 
           <div className="contact-success-pg">
             <h1>Thanks for reaching out!</h1>
               <br/>

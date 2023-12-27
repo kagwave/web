@@ -10,21 +10,21 @@ import iglogo from '../../media/images/iglogo.png';
 const Footer = () => {
 
   return (
-    <div id="footer-container">
+    <div id="footer">
 
       <div id="seperator"></div>
       
-      <div id="footer"> 
+      <div id="footer-container"> 
        
         <div className="footer-links">
-          <div className="about footer-link" //style={{margin: '0 60px 0 0px'}}>
-            ><h1>About</h1>
+          <div className="about footer-link">
+            <h1>About</h1>
             <li><NavLink to="/mission/">Mission</NavLink></li>
             <li><NavLink to="/partners">Partners</NavLink></li>
             <li><NavLink to="/careers">Careers</NavLink></li>
           </div>
-          <div className="resources footer-link" //style={{margin: '0 20px 0 0'}}>
-            ><h1>Resources</h1>
+          <div className="resources footer-link">
+            <h1>Resources</h1>
             <li><NavLink to="/blog">Blog</NavLink></li>
             <li><NavLink to="/terms">Terms</NavLink></li>
             <li><NavLink to="/privacy">Privacy</NavLink></li>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       
         <div className="footer-text"> 
-          <h1>2022 &copy; Kagwave. Some Rights Reserved.</h1>
+          <h1>2023 &copy; Kagwave. Some Rights Reserved.</h1>
           <hr/>
           <div id="footer-credits">
             <img className="sponsor-logo" alt="Kagworld" style={{margin: '5px 0px 5px 0px'}} src={kagworldlogo} />

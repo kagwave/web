@@ -1,4 +1,4 @@
-FROM node:18.14.2
+FROM node:20.10.0
 
 LABEL version="1.0"
 LABEL description="Front End Docker Image Kagwave.com - React"

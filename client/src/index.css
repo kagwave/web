@@ -5,8 +5,6 @@ dark: #171d1e
 navy: #6b8d92
 */
 
-
-
 html, body {
   height: 100%;
 }
@@ -20,7 +18,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
  
-
 #page-content {
   position: relative;
   display: flex;
@@ -149,7 +146,7 @@ body {
 
 
 @media screen and (max-width: 900px) {
-  #page-content { margin-top: 7vh; min-height: 92vh }
+  #page-content { margin-top: 7vh; min-height: 93vh }
 }
 
 @media screen and (min-width: 900px) {
@@ -157,8 +154,8 @@ body {
 }
 
 @media screen and (max-width: 500px){
-  #page-content{min-height: 92vh}
-  .inProgress{min-height: 92vh}
+  #page-content{min-height: 93vh}
+  .inProgress{min-height: 93vh}
 }
 
 

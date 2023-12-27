@@ -1,20 +1,19 @@
-import ContentUnavailable from '../ContentUnavailable';
-import './Mission.css'
+import './Mission.css';
 import MountDisplay from '../../interface/tools/MountDisplay';
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import greece from '../../../media/images/greece.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 
-const Mission = (props: any) => {
+const Mission = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     MountDisplay(undefined, "Mission");
-  }, [])
+  }, []);
 
   return (  
     <div id="page-content">
@@ -39,7 +38,7 @@ const Mission = (props: any) => {
             </h2>
             <h2 style={{fontSize: '14px', fontFamily: 'Questrial'}}>
               Learn More about Universal Reason. 
-              <FontAwesomeIcon icon={faChevronCircleRight} className="mission-learn-more-btn" onClick={() => history.push('/blog/philosophy/1645051479')}/>
+              <FontAwesomeIcon icon={faChevronCircleRight} className="mission-learn-more-btn" onClick={() => navigate('/blog/philosophy/1645051479')}/>
             </h2>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import './Register.css'
 import axios from 'axios';
 import { useState, useEffect } from "react";
-import { useHistory, NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +15,7 @@ const serverUrl = (process.env.NODE_ENV === 'development')
 
 const Register = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [registerInfo, setRegisterInfo] = useState({
     first_name:'', 
@@ -70,7 +70,7 @@ const Register = () => {
         document.getElementById('signup-btn').style.margin = '2px 15px 15px 15px';
       } else {
         document.getElementById('signup-btn').style.margin = '15px';
-        history.push('/login');
+        navigate('/login');
       }
     }).catch((error) => {
       console.log(error);
@@ -86,7 +86,7 @@ const Register = () => {
             <div className="register-desc">
               <img className="register-logo"
                 src={logo} alt="Kagwave™ Logo"
-                onClick={() => history.push('/')}
+                onClick={() => navigate('/')}
               ></img>
               <div className="register-title">
                 <h1>Get on the wave.</h1>

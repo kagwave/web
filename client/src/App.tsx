@@ -6,8 +6,8 @@ import './media/loaders/basic.css'
 
 //React Hooks
 import React, { useEffect, useState } from 'react';
-import { useLocation, useHistory } from 'react-router';
-import { Route, Switch } from 'react-router-dom';
+import { useLocation } from 'react-router';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { login, logout } from './redux/slices/auth';
@@ -30,7 +30,6 @@ import Contact from './components/pages/Contact/Contact';
 import Search from './components/pages/User/Search'
 
 import Mission from './components/pages/About/Mission';
-import Careers from './components/pages/About/Careers';
 import Partners from './components/pages/About/Partners';
 import Founder from './components/pages/About/Founder';
 import Blog from './components/pages/Blog/Home';
@@ -48,7 +47,7 @@ function App() {
   const breakpoint = 900;
 
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -81,7 +80,7 @@ function App() {
   }
 
   const searchCallback = (query: string) => {
-    history.push(`/search/${query.replace(/\s+/g, '-')}`);
+    navigate(`/search/${query.replace(/\s+/g, '-')}`);
   }
 
 
@@ -99,66 +98,22 @@ function App() {
         <HeaderMobile searchCallback={searchCallback}/>
       }
 
-      <Switch>
-
-        <Route exact path="/" render={(props: any) => 
-          <Landing {...props}/>
-        }/>
-
-        <Route path="/sound" render={(props: any) => 
-          <Sound {...props} />
-        }/>
-        
-        <Route path='/products' render={(props: any) => 
-          <Products {...props}/>
-        } />
-
-        <Route path='/store' render={(props: any) => 
-          <Store {...props}/>
-        } />
-
-        <Route path='/services' render={(props: any) => 
-          <Services {...props}/>
-        } />
-
-        <Route path="/contact" render={(props: any) => 
-          <Contact {...props} />
-        } />
-
-        <Route path='/blog' render={(props: any) => 
-          <Blog {...props}/>
-        } />
-
-        <Route path='/search' render={(props: any) => 
-          <Search {...props} />
-        } />
-        
-        <Route path='/terms' render={(props: any) => 
-          <Terms {...props}/>
-        } />
-        <Route path='/privacy' render={(props: any) => 
-          <Privacy {...props}/>
-        } />
-
-        <Route path="/mission" render={(props: any) => 
-          <Mission {...props} />
-        } />
-        <Route path="/partners" render={(props: any) => 
-          <Partners {...props} />
-        } />
-        <Route path="/careers" render={(props: any) => 
-          <Careers {...props} />
-        } />
-        <Route path="/founder" render={(props: any) => 
-          <Founder {...props} />
-        } />
-
-        <Route path='*' render={(props: any) => 
-          <PageNotFound {...props} />
-        } />
-
-
-      </Switch> 
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/sound" element={<Sound />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/founder" element={<Founder />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
 
       <Footer />
 

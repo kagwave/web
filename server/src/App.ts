@@ -2,38 +2,36 @@ import express, { Application, Request, Response, NextFunction, Router } from 'e
 import session from 'express-session';
 import http from 'http';
 import https from 'https';
-import osInfo from 'os';
 import fs from 'file-system';
 import Memory from 'memorystore';
 import helmet from 'helmet';
 import cors from 'cors';
 import path from 'path';
-import { hostUrl } from './shared/utils/urls';
+import { hostUrl, serverUrl } from './utils/urls';
 
 //Authentication
 import passport from 'passport';
 import '../config/passport';
 
-import { ServiceConfig, ServiceMetadata } from './types/services'
-
 import { mongooseConnect } from '../config/db';
+import { ServiceConfig, ServiceMetadata } from './types/services';
 
 const MemoryStore = Memory(session);
 
 class App {
 
   private app: Application;
-  private port: number;
+  private port: number | string;
   private router: Router;
   private server: http.Server | https.Server;
   public metadata: ServiceMetadata;
   
-  constructor(config: ServiceConfig, metadata: ServiceMetadata) {
+  constructor (config: ServiceConfig, metadata: ServiceMetadata) {
 
     const { port, router, staticPath } = config;
 
     this.app = express();
-    this.port = port;
+    this.port = process.env.PORT || port;
     this.router = router;
     this.metadata = metadata;
 
@@ -44,38 +42,49 @@ class App {
     //Build
     if (process.env.NODE_ENV === 'production') {
       this.app.use(express.static(staticPath ? staticPath : "client/build"));
-
-      this.app.get("*", (req: Request, res: Response) => {
-        res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+    
+      this.app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, "../../client", "build", "index.html"));
       });
     }
 
-    this.createServer(config);
+    this.server = this.createServer(config);
   }
 
   private configureMiddlewares() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(function (req: Request, res: Response, next: NextFunction) {
-      res.setHeader('Access-Control-Allow-Origin', hostUrl);
+      const allowedOrigins = [hostUrl, serverUrl, null]; // Allow requests from null origin
+      const origin = req.headers.origin || null; // If the origin is null, set it explicitly
+      if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin!);
+      }
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
       res.setHeader('Access-Control-Allow-Credentials', 'true');
       next();
     });
-    this.app.use(helmet());
+    this.app.use(
+      helmet.contentSecurityPolicy({
+        useDefaults: true,
+        directives: {
+          "img-src": ["'self'", "https:", "data:"]
+        }
+      })
+    );
     const corsOptions = {
       methods: ['GET', 'POST', 'PUT'],
-      origin: hostUrl,
+      origin: hostUrl, // Set default origin if needed
       credentials: true,
     };
-    this.app.options('*', cors(corsOptions));
+    this.app.use(cors(corsOptions));
     this.app.set('trust proxy', 1);
     this.app.disable('x-powered-by');
     this.app.use(require('cookie-parser')());
     this.app.use(require('body-parser').urlencoded({ extended: false }));
     this.app.use(session({
-      secret: 'kagwave',
+      secret: 'ncsu',
       resave: false,
       saveUninitialized: true,
       rolling: true,
@@ -108,17 +117,16 @@ class App {
     mongooseConnect(process.env.ATLAS_URI!);
   }
 
-  public createServer(options: ServiceConfig): void {
+  public createServer(options: ServiceConfig): http.Server | https.Server {
     const { ssl } = options;
-
     if (ssl && process.env.NODE_ENV !== "production" && process.env.DOCKER !== 'true') {
       const httpsOptions = {
         key: fs.readFileSync(ssl.key),
         cert: fs.readFileSync(ssl.cert)
       }
-      this.server = https.createServer(httpsOptions, this.app);
+      return https.createServer(httpsOptions, this.app);
     } else {
-      this.server = http.createServer(this.app);
+      return http.createServer(this.app);
     }
   }
   
