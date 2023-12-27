@@ -4,3 +4,6 @@ node_modules
 **/node_modules
 .env
 **/.env
+
+**/EclipsePromo.mp4
+**/*.mp4
